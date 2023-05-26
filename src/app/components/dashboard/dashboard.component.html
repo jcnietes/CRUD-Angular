@@ -1,0 +1,26 @@
+<div class="root">
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav opened mode="side">
+            <div class="side-root">
+                <div class="side-header">
+                    <h1>SIDE HEADER</h1>
+                </div>
+                <div class="side-content">
+                    <h1>SIDE CONTENT</h1>
+                    <!-- <button class="button-expand" mat-raised-button color="accent" routerLink="Employee">Employee
+                        List</button> -->
+                    <button class="button-expand" mat-raised-button color="accent" routerLink="Product">Product
+                        List</button>
+                </div>
+                <div class="side-footer">
+                    <h1>SIDE FOOTER</h1>
+                    <button mat-raised-button color="accent" (click)="authService.logoutUser()">Logout</button>
+                </div>
+            </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,38 @@
+<form [formGroup]="_registerForm">
+    <div class=" container">
+
+        <h1>Register Page</h1>
+
+        <mat-form-field>
+            <input matInput placeholder="Name" formControlName="name" type="email" required>
+            <!-- <mat-error *ngIf="registerForm.controls['email'].hasError('minlength')">
+                Username must be at least 3 characters long.
+            </mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" type="email" required>
+            <!-- <mat-error *ngIf="_registerForm.control('password').hasError('minlength')">
+                Password must be at least 3 characters long.
+            </mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Password" formControlName="password" type="password" required>
+            <!-- <mat-error *ngIf="_registerForm.control('password').hasError('minlength')">
+                Password must be at least 3 characters long.
+            </mat-error> -->
+        </mat-form-field>
+
+        <!-- <mat-form-field>
+            <input matInput placeholder="Confirm Password" formControlName="password_confirmation" type="password"
+                required>
+            <mat-error *ngIf="_registerForm.control('password').hasError('minlength')">
+                Password must be at least 3 characters long.
+            </mat-error>
+        </mat-form-field> -->
+
+        <button mat-flat-button color="primary" type="submit">Register</button>
+
+    </div>
+</form>

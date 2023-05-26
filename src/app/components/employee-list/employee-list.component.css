@@ -1,0 +1,74 @@
+/* SIDE BAR */
+
+.side-root {
+    width: 300px;
+    height: 100vh;
+}
+
+
+table {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+th.mat-header-cell:last-of-type,
+td.mat-cell:last-of-type,
+td.mat-footer-cell:last-of-type {
+    text-align: center;
+}
+
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+    text-align: center;
+}
+
+.main-container {
+    margin: 0px 25px;
+}
+
+.container {
+    height: 100vh;
+}
+
+table {
+    width: 100%;
+}
+
+.form-top-margin {
+    margin-top: 10px;
+}
+
+.form-font-size {
+    font-size: 36px;
+}
+
+.mat-header-cell {
+    font-size: 20px;
+}

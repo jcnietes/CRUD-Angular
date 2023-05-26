@@ -1,0 +1,40 @@
+<div class="container">
+    <form [formGroup]="_addProductForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
+            <mat-error *ngIf="_addProductForm.get('name').hasError('required')">
+                Required input needed
+            </mat-error>
+        </mat-form-field>
+
+        <!-- <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description" required>
+            <mat-error *ngIf="_addProductForm.get('description').hasError('required')">
+                Required input needed
+            </mat-error>
+        </mat-form-field> -->
+
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price" required>
+            <mat-error *ngIf="_addProductForm.get('price').hasError('pattern')">
+                Enter whole numbers
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Image Link</mat-label>
+            <input matInput formControlName="image_link" required>
+            <mat-error *ngIf="_addProductForm.get('image_link').hasError('required')">
+                Enter link
+            </mat-error>
+        </mat-form-field>
+
+
+        <button mat-raised-button color="accent" type="submit"
+            [disabled]="_addProductForm.invalid">{{actionBtn}}</button>
+    </form>
+</div>

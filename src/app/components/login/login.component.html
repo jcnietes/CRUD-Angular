@@ -1,0 +1,20 @@
+<form [formGroup]="_loginFormGroup" (ngSubmit)="onLogin()">
+    <div class="container">
+        <h1>
+            Login Page
+        </h1>
+        <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email">
+            <!-- <mat-hint *ngIf="loginGroup.controls.uname.errors">Email is required</mat-hint> -->
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password">
+            <!-- <mat-hint *ngIf="loginGroup.controls.pword.errors">Password is required</mat-hint> -->
+        </mat-form-field>
+        <button *ngIf="!authService.loggedIn()" routerLinkActive="active" mat-flat-button color="primary"
+            type="submit">Login</button>
+        <button class="margin-top" *ngIf="authService.loggedIn()" routerLinkActive="active" mat-flat-button
+            type="button" color="primary" routerLink="/Register">Register</button>
+    </div>
+</form>

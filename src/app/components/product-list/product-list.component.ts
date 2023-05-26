@@ -89,8 +89,10 @@ export class ProductListComponent implements OnInit {
       });
   }
 
+  // Test
+  // Test
+  // Test
 
-  // test!
   onDelete(id: any) {
     console.log(id);
     this.api.deleteProduct(id).subscribe({
